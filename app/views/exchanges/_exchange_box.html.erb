@@ -9,7 +9,7 @@
       <%= form_tag('/convert', method: :get, id: 'exchange_form') do %>
         <div class='local_currency'>
           <div class='form-group'>
-            <p class='title'>Moeda Local</p>
+            <p class='title'>Fonte</p>
             <%= select_tag 'source_currency', options_for_select(currency_list, 'BRL'), class: 'form-control', id: 'source_currency' %>
           </div>
 
@@ -20,7 +20,7 @@
 
         <div class='destination_currency'>
           <div class='form-group'>
-            <p class='title'>Moeda Pretendida</p>
+            <p class='title'>Destino</p>
             <%= select_tag 'target_currency', options_for_select(currency_list, 'EUR'), class: 'form-control', id: 'target_currency'%>
           </div>
           <div class='form-group'>
@@ -28,7 +28,7 @@
           </div>
         </div>
         <div>
-          <button type='submit' class='btn btn-primary btn-exchange col-md-12'>CONVERTER</button>
+          <button type='submit' class='btn btn-primary btn-exchange col-md-12'>INVERTE MOEDAS</button>
         </div>
       <% end %>
     </div>
